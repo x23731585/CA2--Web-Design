@@ -3,70 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Clam Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
+<link rel="stylesheet" href="styles.css">
 <body>
+
+
+
+
+    <div class="header">
     
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-    <section class="Contactus">
-
-        <!--Contact Form for users on the website-->
-        <form id="contactForm"> 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name" minlength="3">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email" minlength="7">
-
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required placeholder="Enter the subject" minlength="3">
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Enter the message" minlength="15"></textarea>
-          
-            <!-- Onlcick event so when the user clicks submit there is an onclick event that displays a message-->
-            <button type="submit" onclick="showAlert()">Submit</button>
-        </form>
-
-        <div class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-            <form id="newsletterForm">
-                <label for="newsletterEmail">Email:</label>
-                <input type="email" id="newsletterEmail" name="newsletterEmail" required>
-
-                <button type="submit">Subscribe</button>
-            </form>
+    <div class="container">
+        <div class="navbaar">
+            <div class="logo">
+                <img src="clam/clam image.jpg" width="125px">
+            </div>
+            <nav>
+                <ul>
+                     <li><a href="">Home</a></li>
+                     <li><a href="">Products</a></li>
+                     <li><a href="">About</a></li>
+                     <li><a href="">Contact</a></li>
+                     <li><a href="">Account</a></li>
+                     <li><img src="clam/cart icon.png" width="30px" height="30px"></li>
+                </ul>
+            </nav>
+            
         </div>
-    </section>
+        <div class="">
+            <div class="col-2">
+                <h1>Enjoy your new <br> clam based items!</h1>
+                <p>Clams aren't just sea food <br> they can also be a lovable toy or a nice design on your clothes</p>
+                <a href="" class="btn">Explore Now &#8594;</a>
+            </div>
+            <div class="col-21">
+                <img src="clam/clam 1.jpg" >
 
-            <footer class="footerone">
-                 <a href="#">Terms and Conditions</a>
-                 <a href="#">Credits</a>
-                 <a href="#">Contact Us</a>
-                 <a href="#">Explore</a>
-                 <a href="#">Home</a>
-                 <a href="#">About Us</a>
-                 <a href="#">Shop</a>
-             </footer>
+            </div>
+        </div>
+    </div>
+    </div>
 
-            <script>
-              
-              function showAlert() {
-        var form = document.getElementById('contactForm');
-        if (form.checkValidity()) { /* check to see if the form is valid*/
-            alert("Your Message Has Been Successfully Sent!");
-        } else {
-            // Optionally, you can display an error message or take other actions
-            alert('Please fill out all required fields correctly.');
-        }
-    }
-                
-
-            </script>
-
+    <!------- featured categories ------->
+    <div class="catigories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="clam/clam toy.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="clam/clam toy 2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="clam/clam toy3.jpg">
+        </div>
         
+            </div>
+        </div>
+    </div>
+<!------- featured products ------->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+           <div class="col-4">
+            <img src="clam/clamm toy 1.jpg">
+            <h4>Ministry of Pets Coral the Clam Plush</h4>
+            <p>£5.32</p>
+           </div>
+           <div class="col-4">
+            <img src="clam/clamm toy 2.jpg">
+            <h4>Shell Pillow Seashell Shaped Accent Throw Pillow</h4>
+            <p>£36.00</p>
+            </div>
+            <div class="col-4">
+                <img src="clam/clamm toy 3.jpg">
+                <h4>Beach PVC Pearl Shell Sofa, Inflatable 160 x 130 cm</h4>
+                <p>£13.50</p>
+        </div>
+        <div class="col-4">
+            <img src="clam/clamm toy 4.jpg">
+            <h4>Polly Pocket Micro, Tiny Power Seashell </h4>
+            <p>£15.36</p>
+    </div>
+    <!-----Latest Products----->
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+        <div class="col-4">
+         <img src="clam/clammmm toys 1.webp">
+         <h4>Sea Shell LED Colour Changing Glitter Mood Lamp Pearl Light Accent Lamp</h4>
+         <p>£20.99</p>
+        </div>
+        <div class="col-4">
+         <img src="clam/clammmm toys 2.webp">
+         <h4>Almineez Attractive Clam Glitter Sea Shell Pearl Colour Changing Lamp</h4>
+         <p>£23.28</p>
+         </div>
+         <div class="col-4">
+             <img src="clam/clammmm toys 3.webp">
+             <h4>Rosewood Ormanent Bubbling Action Clam Aquarium Fun</h4>
+             <p>£7.57</p>
+     </div>
+     <div class="col-4">
+         <img src="clam/clammmmtoys 4.jpg">
+         <h4>Giant Clam</h4>
+         <p>£24.99</p>
+ </div>
+ <!--------Offer------>
+ <div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="clam/clam offer.jpg" class="offer-img">
+            </div>
+            <div class="col-2"></div>
+            <p>Excusively Available on ClamStore</p>
+            <h1>Whisker City Pride Rainbow Clam Interactive Cat Toys</h1>
+            <small>Great way to attract your cat's attention and make it active It's an Irresistible lure for your cat and your cat will love this toy Interact with your ...</small>
+        <a href="" class="btn">Buy Now &#8594;</a>
+        </div>
+    </div>
+ </div>
+ <!-------brands------->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="clam/brand logo 1.png">
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <img src="clam/brand logo 2.png">
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <img src="clam/brand logo 3.png">
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <img src="clam/brand logo 4.png">
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <img src="clam/brand logo 5.png">
+                </div>
+    </div>          
+    </div>
 </body>
-</html>
