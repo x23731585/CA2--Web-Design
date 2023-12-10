@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ClamGalorious</title> 
+    <link rel="stylesheet" href="style.css"> 
+ </head>
+ <body>  
+      
+    <div class="contain"> 
+    <div class="background">
+       <video autoplay loop muted plays-inline class="back-video">
+        <source src="138588 (1440p).mp4" type="video/mp4">
+       </video>
+
+       <div class="content">
+          <h1>Keep Clam</h1>
+       </div>
+       <nav>
+          <img src="scallop-32686_1280.png" class="logo">
+          <ul>
+             <li><a href="index.html">HOME</a></li>
+             <li><a href="../Explore,About us, Us/aboutus.html">ABOUT US</a></li>
+             <li><a href="../Explore,About us, Us/us.html">US</a></li>
+             <li><a href="../Explore,About us, Us/explore.html">EXPLORE</a></li>
+             <li><a href="../Contact us/contact.html">CONTACT US</a></li>
+          </ul>
+       </nav>
+    </div>
+
+    <hr>
+
+    <div id="quiz-container">
+      <!-- Heading for the quiz -->
+      <h1 class="gameh1">True or False Quiz</h1>
+  
+      <!-- Displaying the current question -->
+      <h2 id="question"></h2>
+  
+      <!-- Buttons for True and False answers -->
+      <div>
+          <button  class="gamebutton" onclick="checkAnswer(true)">True</button>
+          <button  class="gamebutton" onclick="checkAnswer(false)">False</button>
+      </div>
+  
+      <!-- Displaying the result of the user's answer -->
+      <div id="result"></div>
+  </div>
+    </div>
+
+
+
+  <script>
+   // Quiz questions and answers
+   const allQuestions = [
+       { text: 'Clams have more than 2 Shells', answer: false },
+       { text: 'There are over 15,000 of species of clams worldwide', answer: true },
+       { text: 'clams live 5 years on average', answer: false },
+       { text: 'Clams can surrive for up to 30 days out of water', answer: false },
+       { text: 'Clams have hearts and kidneys', answer: true },
+       { text: 'Clams eat sand on the beach', answer: false }
+   ];
+
+   // Quiz state
+   let questions = []; // Current set of questions
+   let currentQuestionIndex = 0;
+   let score = 0;
+
+   // Start the quiz when the page loads
+   resetQuiz();
+
+   // Function to reset the quiz with random questions
+   function resetQuiz() {
+       currentQuestionIndex = 0;
+       score = 0;
+       questions = getRandomQuestions(allQuestions, 4); // Get 4 random questions
+       showQuestion();
+   }
+
+   // Function to display the current question
+   function showQuestion() {
+       const question = questions[currentQuestionIndex];
+       document.getElementById('question').textContent = question.text;
+   }
+
+   // Function to check the user's answer
+   function checkAnswer(userAnswer) {
+       const question = questions[currentQuestionIndex];
+
+       // Update the score and display the result
+       if (userAnswer === question.answer) {
+           score++;
+           document.getElementById('result').textContent = 'Correct!';
+       } else {
+           document.getElementById('result').textContent = 'Incorrect!';
+       }
+
+       currentQuestionIndex++;
+
+       // Check if there are more questions or end the quiz
+       if (currentQuestionIndex < questions.length) {
+           // Show the next question after a delay
+           setTimeout(() => {
+               document.getElementById('result').textContent = ''; // Clear the result
+               showQuestion();
+           }, 1000); // Delay
+       } else {
+           // End the quiz and show the final result
+           setTimeout(() => {
+               endGame();
+           }, 1000); // Delay 
+       }
+   }
+
+   // Function to end the quiz and display the final score
+   function endGame() {
+       document.getElementById('question').textContent = 'Quiz completed! Your score is: ' + score + '/' + questions.length;
+       document.getElementById('result').textContent = '';
+       
+       // Provide an option to play again
+       setTimeout(() => {
+           resetQuiz();
+       }, 1000); // Delay 
+   }
+
+   // Function to get a random subset of questions
+   function getRandomQuestions(allQuestions, count) {
+       const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5); // Shuffle the questions
+       return shuffledQuestions.slice(0, count); // Get the first 'count' questions
+   }
+</script>
+
+
+   </body>
+</html>
 
