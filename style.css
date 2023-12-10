@@ -1,3 +1,6 @@
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -377,54 +380,35 @@ p{
  text-align: center; 
 }
 
-#game-box {
-   background-color: #fff;
-   padding: 20px;
-   border-radius: 10px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-   max-width: 400px;
-   width: 100%;
+.galleryh1{
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: #fff;
 }
 
 
- button.gamebutton {
-   background-color: #4caf50;
-   color: #fff;
-   padding: 10px 20px;
-   font-size: 16px;
-   border: none;
+.gallery {
+   display: flex;
+   overflow: hidden;
+ }
+
+ .gallery img {
+   width: 100%;
+   flex: 0 0 100%; /* Each image takes 100% of the width */
+   transition: transform 0.5s ease-in-out;
+   max-height: 250px;
+   max-width: 250px;
+  margin-left: 415px;
+  margin-bottom: 100px;
+ }
+
+ .gallerybackground{
+   background-color: #000000;
    border-radius: 5px;
-   cursor: pointer;
-   margin-top: 20px;
-   transition: background-color 0.3s;
-   margin-left: 310px;
-   
- }
-
- button:hover {
-   background-color: #438dbb;
- }
-
- #quiz-container{
-   border-radius: 8px;
    border-style: solid;
+   border-color: #fff;
+   opacity: 80%;
+   margin-bottom: 100pxs;
    margin-left: 200px;
    margin-right: 200px;
- background-color: rgb(28, 83, 150);
  }
-      
- 
-
- .gameh1{
-   text-align: center;
-   font-family: Georgia, 'Times New Roman', Times, serif;
- }
-
- #question{
-   text-align: center;
-   color: #fff;
- }
-
-
-
- 

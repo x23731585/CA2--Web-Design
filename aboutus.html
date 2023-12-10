@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ClamGalorious</title> 
+    <link rel="stylesheet" href="style.css"> 
+ </head>
+ <body>
+   <div class="contain"> 
+
+    <div class="background">
+       <video autoplay loop muted plays-inline class="back-video">
+        <source src="138588 (1440p).mp4" type="video/mp4">
+       </video>
+
+       <div class="content">
+          <h1>About Us</h1>
+       </div>
+       <nav>
+          <img src="scallop-32686_1280.png" class="logo">
+          <ul>
+             <li><a href="../Home Page/index.html">HOME</a></li>
+             <li><a href="aboutus.html">ABOUT US</a></li>
+             <li><a href="us.html">US</a></li>
+             <li><a href="explore.html">EXPLORE</a></li>
+             <li><a href="../Contact us/contact.html">CONTACT US</a></li>
+          </ul>
+       </nav>
+    </div>
+      
+      
+    <!-----About Us----->
+    <section class="About">
+        <h1>About Us</h1>
+        <div class="aboutuspic">
+           <div class="aboutus-col">
+             <img src="dough kneading img.jpg" alt="kneading dough img">
+           </div> 
+       
+           <p>So, here's the scoop. We're a lively bunch of food enthusiasts with a soft spot for cooking shows. One night, we decided to host a pizza-making extravaganza, with our beloved Food Network humming in the background. And then, in one of those rare, perfect moments of silence (you know the ones... when everyone's too busy stuffing their faces to chat?), Mary Berry's voice breaks through, dropping a shell-shocker on us. "Clams," she says, "are a sustainable seafood alternative." We're all thinking, "Clams? Really? The little shell guys?" But, lo and behold, they're not only sustainable, but they're also little environmental cleaners! We were floored, and now we're on a mission to spread the word. Because who knew, right? Clams, the unsung heroes of the sea. Go figure!</p>
+       </div>
+         </div>
+       
+         <hr>
+                 <div class="gallerybackground">
+         <h1 class="galleryh1"> Pictures of Clams </h1>
+         <h2 class="galleryh1"> Click on image to view next</h2>
+
+         <div class="gallery" id="imageGallery">
+            <img src="pic 1.jpg" alt="Image 1" onclick="nextImage()">
+          </div>
+          
+          <script>
+              
+             // Get the element with the ID 'imageGallery'
+const gallery = document.getElementById('imageGallery');
+
+// sets the currentIndex to 0
+let currentIndex = 0;
+
+// image names
+const imageNames = ["pic 1.jpg", "pic 2.jpg", "pic 3.jpg", "pic 4.jpg"];
+
+// Function to show the next image
+function nextImage() {
+    // Update the currentIndex to the next index
+    currentIndex = (currentIndex + 1) % imageNames.length;
+
+    // Get the name of the current image
+    const imageName = imageNames[currentIndex];
+
+    // The image URL is the same as the image name in this example
+    const imageUrl = imageName;
+
+    // Find the 'img' element inside the gallery
+    const imageElement = gallery.querySelector('img');
+
+    // Set the 'src' attribute of the 'img' element to the new image URL
+    imageElement.src = imageUrl;
+}
+
+                   
+          </script>
+       
+       </body>
+       </html>
